@@ -21,6 +21,8 @@ window.Vue = require('vue');
 
 Vue.component('navigation-component', require('./components/NavigationComponent.vue').default);
 
+Vue.component('hero-index-component', require('./components/HeroIndexComponent.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

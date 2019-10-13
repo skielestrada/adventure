@@ -1,7 +1,7 @@
 <template>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-            <a class="nav-link" href="#">Heroes</a>
+            <a class="nav-link" :href="this.heroroute">Heroes</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Monsters</a>
@@ -20,6 +20,6 @@
 
 <script>
     export default {
-        
+        props: ['heroroute'],        
     }
 </script>
