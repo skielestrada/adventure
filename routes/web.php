@@ -20,6 +20,7 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::view('/heroes/home', 'hero.index')->name('heroes.home');
+    Route::view('/monsters/home', 'monster.index')->name('monsters.home');
 
 	Route::get('/classes/race/{id}', 'ClassController@classesByRace');
 	Route::get('/classes/popularheroclass/', 'ClassController@popularHeroClass');
@@ -30,4 +31,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('heroes', 'HeroController');
 	Route::resource('races', 'RaceController');
 	Route::resource('modules', 'ModuleController');
+	Route::resource('monsters', 'MonsterController');
 });

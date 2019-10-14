@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('navigation-component', require('./components/NavigationComponent.vue').default);
 
 Vue.component('hero-index-component', require('./components/HeroIndexComponent.vue').default);
+Vue.component('monster-component', require('./components/MonsterComponent.vue').default);
 Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
 
 /**
