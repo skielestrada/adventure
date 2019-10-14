@@ -15,7 +15,7 @@ class DefaultModulesSeeder extends Seeder
     {
         DB::table('modules')->insert([
             ['name' => 'Heroes', 'url' => '/heroes/home', 'active' => true],
-            ['name' => 'Monsters', 'url' => '/monsters/home', 'active' => false],
+            ['name' => 'Monsters', 'url' => '/monsters/home', 'active' => true],
             ['name' => 'Admin', 'url' => '/admin', 'active' => false],
             ['name' => 'Users', 'url' => '/users/home', 'active' => false],
             ['name' => 'Roles', 'url' => '/roles/home', 'active' => false],
