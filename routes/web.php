@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::resource('heroes', 'HeroController');
 	Route::resource('races', 'RaceController');
+	Route::resource('modules', 'ModuleController');
 	Route::get('/classes/race/{id}', 'ClassController@classesByRace');
 	Route::get('/weapons/class/{id}', 'WeaponController@weaponsByClass');
 });

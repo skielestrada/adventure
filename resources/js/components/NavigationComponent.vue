@@ -1,13 +1,8 @@
 <template>
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" :href="this.heroroute">Heroes</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Monsters</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Admin</a>
+        <li class="nav-item" v-for="module in modules">
+            <a class="nav-link" :href="module.url" v-if="module.active">{{module.name}}</a>
+            <a class="nav-link" href="#" data-toggle="tooltip" data-placement="bottom" title="Module not available" v-else>{{module.name}}</a>
         </li>
         <li>
             <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -20,6 +15,15 @@
 
 <script>
     export default {
-        props: ['heroroute'],        
+        data() {
+            return {
+                modules: [],
+            }
+        },
+        created(){
+            axios.get('/modules').then( res => {
+                this.modules = res.data;
+            })
+        },
     }
 </script>

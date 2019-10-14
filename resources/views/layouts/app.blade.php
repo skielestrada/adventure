@@ -50,7 +50,7 @@
                             @endif
                         </ul>
                     @else
-                        <navigation-component heroroute="{{ route('heroes.home') }}"  />
+                        <navigation-component />
                     @endguest
                 </div>
             </div>
