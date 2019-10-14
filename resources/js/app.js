@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('navigation-component', require('./components/NavigationComponent.vue').default);
 
 Vue.component('hero-index-component', require('./components/HeroIndexComponent.vue').default);
+Vue.component('dashboard-component', require('./components/DashboardComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

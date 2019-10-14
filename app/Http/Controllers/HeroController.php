@@ -50,4 +50,9 @@ class HeroController extends Controller
         $hero = Hero::find($id);
         $hero->delete();
     }
+
+    public function availableHeroes() {
+        $heroes = Hero::all();
+        return $heroes->count();
+    }
 }
